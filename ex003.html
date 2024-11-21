@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+   // Solicita dois números ao usuário
+let numero1 = prompt("Digite o primeiro número:");
+let numero2 = prompt("Digite o segundo número:");
+
+// Converte as entradas para números decimais usando parseFloat()
+numero1 = parseFloat(numero1);
+numero2 = parseFloat(numero2);
+
+// Calcula a diferença entre o maior e o menor número
+let maiorNumero = Math.max(numero1, numero2);
+let menorNumero = Math.min(numero1, numero2);
+let diferenca = maiorNumero - menorNumero;
+
+// Exibe a diferença
+alert("A diferença entre o maior e o menor número é: " + diferenca);
+
+</script>
+
+
+
+</body>
+</html>

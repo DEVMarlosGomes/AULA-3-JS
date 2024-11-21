@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <script>
+    // Solicita o ano de nascimento do usuário
+    let anoNascimento = prompt("Digite seu ano de nascimento:");
+    
+    // Converte a entrada para um número inteiro usando parseInt()
+    anoNascimento = parseInt(anoNascimento);
+    
+    // Obtém o ano atual
+    let anoAtual = new Date().getFullYear();
+    
+    // Calcula a idade
+    let idade = anoAtual - anoNascimento;
+    
+    // Exibe a idade calculada
+    alert("Sua idade é: " + idade + " anos.");
+</script>
+
+</body>
+</html>

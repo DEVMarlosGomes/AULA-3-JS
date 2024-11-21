@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+    // Solicita ao usuário o nome do produto
+let nomeProduto = prompt("Digite o nome do produto:");
+
+// Solicita o preço unitário e converte para decimal
+let precoUnitario = parseFloat(prompt("Digite o preço unitário do produto:"));
+
+// Solicita a quantidade comprada e converte para decimal
+let quantidade = parseFloat(prompt("Digite a quantidade comprada:"));
+
+// Calcula o valor total da compra (sem imposto)
+let valorTotal = precoUnitario * quantidade;
+
+// Calcula o imposto de 18% sobre o valor total
+let imposto = valorTotal * 0.18;
+
+// Calcula o valor total com imposto
+let valorTotalComImposto = valorTotal + imposto;
+
+// Exibe todas as informações
+alert("Produto: " + nomeProduto + "\n" +
+      "Preço Unitário: R$ " + precoUnitario.toFixed(2) + "\n" +
+      "Quantidade: " + quantidade + "\n" +
+      "Imposto (18%): R$ " + imposto.toFixed(2) + "\n" +
+      "Valor Total (com imposto): R$ " + valorTotalComImposto.toFixed(2));
+
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <script>
+
+   // Solicita ao usuário o número de horas trabalhadas por semana e o valor da hora trabalhada
+let horasTrabalhadasPorSemana = parseInt(prompt("Digite o número de horas trabalhadas por semana:"));
+let valorPorHora = parseFloat(prompt("Digite o valor da hora trabalhada:"));
+
+// Calcula o salário semanal
+let salarioSemanal = horasTrabalhadasPorSemana * valorPorHora;
+
+// Calcula o salário mensal (assumindo 4 semanas no mês)
+let salarioMensal = salarioSemanal * 4;
+
+// Exibe o salário semanal e mensal
+alert("Seu salário semanal é: R$ " + salarioSemanal.toFixed(2));
+alert("Seu salário mensal é: R$ " + salarioMensal.toFixed(2));
+
+</script>
+
+
+
+</body>
+</html>
