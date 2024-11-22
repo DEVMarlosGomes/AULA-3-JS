@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Situação do Aluno</title>
+</head>
+<body>
+
+<script>
+// Função para calcular a média
+function calcularMedia(nota1, nota2, nota3) {
+    return (nota1 + nota2 + nota3) / 3;
+}
+
+// Função principal
+function verificarSituacaoAluno() {
+    // Solicita os dados do aluno
+    const nomeAluno = prompt("Digite o nome do aluno:");
+
+    // Verifica se o nome não é vazio
+    if (!nomeAluno) {
+        alert("O nome do aluno não pode ser vazio.");
+        return;
+    }
+
+    // Solicita as notas e valida se são números
+    const nota1 = parseFloat(prompt("Digite a nota 1:"));
+    const nota2 = parseFloat(prompt("Digite a nota 2:"));
+    const nota3 = parseFloat(prompt("Digite a nota 3:"));
+    
+    // Verifica se as notas são números válidos
+    if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3)) {
+        alert("Por favor, insira notas válidas.");
+        return;
+    }
+
+    // Solicita a porcentagem de faltas e valida se é um número
+    const porcentagemFaltas = parseFloat(prompt("Digite a porcentagem de faltas:"));
+    
+    if (isNaN(porcentagemFaltas)) {
+        alert("Por favor, insira uma porcentagem de faltas válida.");
+        return;
+    }
+
+    // Calcula a média do aluno
+    const media = calcularMedia(nota1, nota2, nota3);
+
+    // Determina a situação do aluno
+    let situacao;
+    if (media >= 7 && porcentagemFaltas < 25) {
+        situacao = "Aprovado";
+    } else if (media >= 5 && media < 7 && porcentagemFaltas < 25) {
+        situacao = "Recuperação";
+    } else {
+        situacao = "Reprovado";
+    }
+
+    // Exibe o resultado
+    alert(`Aluno: ${nomeAluno}\nMédia: ${media.toFixed(2)}\nSituação: ${situacao}\nPorcentagem de Faltas: ${porcentagemFaltas.toFixed(2)}%`);
+}
+</script>
+
+</body>
+</html>
