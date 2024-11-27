@@ -4,6 +4,6 @@ body.light {
 }
 
 body.dark {
-    background-color: black;
+    background-color: rgb(153, 8, 8);
     color: white;
 }
